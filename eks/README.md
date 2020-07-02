@@ -15,7 +15,6 @@ This terraform plan creates an EKS cluster, VPC/Networking, IAM roles/policies, 
 > - endpoint_public_access
 > - endpoint_private_access
 > - ec2_ssh_key
-<br>
 >
 > For example, your `.tfvars` file might look similar to this:
 > ```

@@ -1,4 +1,4 @@
-
+/*
 ## Create the SSL certificate with ACM.
 resource "aws_acm_certificate" "cert" {
   domain_name               = var.domain_name
@@ -49,3 +49,4 @@ resource "aws_acm_certificate_validation" "cert" {
     aws_route53_record.cert_validation-2.fqdn
   ]
 }
+*/

@@ -78,11 +78,10 @@ resource "aws_iam_role_policy_attachment" "main-node-AmazonEC2FullAccess" {
 }
 
 ## Attach EKS ALB ingress policy to EKS worker node IAM role.
-resource "aws_iam_role_policy_attachment" "main-node-alb-ingress_policy" {
-  policy_arn = aws_iam_policy.alb-ingress.arn
-  role       = aws_iam_role.main-node.name
-}
-
+#resource "aws_iam_role_policy_attachment" "main-node-alb-ingress_policy" {
+#  policy_arn = aws_iam_policy.alb-ingress.arn
+#  role       = aws_iam_role.main-node.name
+#}
 
 ## Define and EC2 instance profile, used to deploy EKS worker nodes.
 resource "aws_iam_instance_profile" "main-node" {

@@ -7,6 +7,7 @@ variable "vpn_cidr_block" {}
 variable "endpoint_public_access" {}
 variable "endpoint_private_access" {}
 variable "ec2_ssh_key" {}
+variable "aws_creds" {}
 
 variable "eks_desired_size" {
     default = 3
@@ -76,4 +77,10 @@ variable "egressCIDRblock" {
 
 variable "mapPublicIP" {
     default = true
+}
+
+
+
+variable "enable_cross_zone_load_balancing" {
+  default = true
 }

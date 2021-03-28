@@ -71,7 +71,7 @@ spec:
         fsGroup: 1000
   seedJobs:
   - id: jenkins-operator
-    targets: "apps/jenkins-seed-jobs/hello-world/jobs/hello-world.jenkins"
+    targets: "apps/jenkins-seed-jobs/hello-world/jobs/hello_world.jenkins"
     description: "Hello World Demo - Jenkins Operator"
     repositoryBranch: dev
     repositoryUrl: https://github.com/Joeltrane/architecture-demo.git

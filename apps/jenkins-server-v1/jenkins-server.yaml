@@ -3,6 +3,12 @@ kind: Jenkins
 metadata:
   name: prod-jenkins
 spec:
+#  configurationAsCode:
+#    configurations:
+#    - name: jenkins-operator-user-configuration
+#  groovyScripts:
+#    configurations:
+#    - name: jenkins-operator-user-configuration
   service:
     type: NodePort
     port: 8080
@@ -29,6 +35,10 @@ spec:
       env:
       - name: JENKINS_OPTS
         value: --prefix=/jenkins
+      #- name: JENKINS_USER
+      #  value: student
+      #- name: JENKINS_PASSWORD
+      #  value: password
       livenessProbe:
         failureThreshold: 12
         httpGet:
@@ -60,11 +70,11 @@ spec:
         runAsUser: 1000
         fsGroup: 1000
   seedJobs:
-  - id: jenkins-operator-student
-    targets: "cicd/jobs/*.jenkins"
-    description: "Jenkins Operator Example Repository"
-    repositoryBranch: jenkins_operator
-    repositoryUrl: https://github.com/pavan-kumar-99/medium-manifests.git
+  - id: jenkins-operator
+    targets: "apps/jenkins-seed-jobs/hello-world/jobs/hello-world.jenkins"
+    description: "Hello World Demo - Jenkins Operator"
+    repositoryBranch: master
+    repositoryUrl: https://github.com/Joeltrane/architecture-demo.git
 ---
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress

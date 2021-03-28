@@ -73,7 +73,7 @@ spec:
   - id: jenkins-operator
     targets: "apps/jenkins-seed-jobs/hello-world/jobs/hello-world.jenkins"
     description: "Hello World Demo - Jenkins Operator"
-    repositoryBranch: master
+    repositoryBranch: dev
     repositoryUrl: https://github.com/Joeltrane/architecture-demo.git
 ---
 apiVersion: networking.k8s.io/v1beta1
